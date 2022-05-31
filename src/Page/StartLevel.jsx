@@ -1,15 +1,17 @@
 import React from "react";
-import NavBar from '../Layoutes/Nav';
-
+import BackGroundAnimation from "../Layoutes/Background";
+import '../Styles/Menu/StartLevel.css'
+import { Link } from 'react-router-dom';
 
 const StartLevel = () => {
+
     return (
         <>
-            <h1>
-            {<NavBar />}
-
-                Start
-            </h1>
+            <div className="CheckLevelCenter">
+             <Link to="/ChangeLevel">
+                 <div className="ButtomStart">Start</div>
+              </Link>
+            </div>
         </>
       );
 }
