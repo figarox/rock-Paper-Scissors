@@ -1,6 +1,6 @@
 .CheckLevelCenter{
     background-color: rgb(234, 234, 234);
-    height: 100vh;
+    height: 100%;
 }
     
     .ButtomStart {
@@ -32,8 +32,8 @@
       content: '';
       position: absolute;
       border: 3px solid gold;
-      bottom: 4px;
-      left: 4px;
+      bottom: 6px;
+      left: 6px;
       width: calc(100% - 3px);
       height: calc(100% - 3px);
     }

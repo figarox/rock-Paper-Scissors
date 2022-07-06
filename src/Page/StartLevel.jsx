@@ -2,6 +2,7 @@ import React from "react";
 import BackGroundAnimation from "../Layoutes/Background";
 import '../Styles/Menu/StartLevel.css'
 import { Link } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const StartLevel = () => {
 
