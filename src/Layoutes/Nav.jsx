@@ -10,7 +10,7 @@ const NavBar = () => {
                         <div class="row">
                               <div class="col">
                                     <div className="card-level">
-                                          <Link to="/LevelTwo">
+                                          <Link to="/LevelOne">
                                                 <div className="Button">
                                                       <a>Start</a>
                                                 </div>

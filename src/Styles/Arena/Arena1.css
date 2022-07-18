@@ -1,18 +1,52 @@
 .Arena{
     position: absolute;
-    width: 92%;
+    width: 72%;
     height: 60%;
-    background-color: rgb(94, 94, 94);
-    border: 2px solid gold;
+    background-color: rgb(240, 240, 240);
+    border: 2px solid rgba(255, 217, 0, 0.181);
     top: 8%;
-    left: 4%;
+    left: 14%;
 }
 .Table{
     position: absolute;
-    width: 92%;
+    width: 72%;
     height: 20%;
-    background-color: rgb(94, 94, 94);
-    border: 2px solid gold;
+    background-color: rgb(240, 240, 240);
+    border: 2px solid rgba(255, 217, 0, 0.181);
     top: 74%;
-    left: 4%;
+    left: 14%;
+}
+
+.FotterArena{
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    height: 10%;
+}
+
+.TableFirst , .TableSecond{
+    width: 50%;
+    height: 100%;
+    background-color: aqua;
+    padding: 40px;
+    float: left;
+    text-align: center;
+    font-size: 30px;
+}
+
+.ButtonWarOne,.ButtonWarTwo,.ButtonWarThree{
+    width: 55px;
+    height: 55px;
+    border: 1.2px solid black;
+    border-radius: 10px;
+    transform: rotate(45deg);
+    transition: 350ms;
+
+}
+.ButtonWarOne:hover,.ButtonWarTwo:hover,.ButtonWarThree:hover{
+    transform: rotate(0deg) scale(1.5);
+    cursor: pointer;
+    border: 1.4px solid rgb(251, 193, 2);
+    background-color: white;
+
 }
