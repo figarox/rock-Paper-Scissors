@@ -3,11 +3,14 @@ import '../Styles/App.css'
 import '../Styles/Arena/Arena1.css';
 import Game from "../Game System/game";
 import Button_Game from "../Game System/Button";
+import Scors from "../Styles/Arena/TableScors";
 
 const LevelOne = () => {
     return ( 
         <>
-            <div className="BlackScreen hover"></div>
+            <div className="BlackScreen" id="BS">
+                <div className="BS_icon"></div>
+            </div>
             <div className="Body">
                 <div className="Arena">
 
@@ -22,12 +25,7 @@ const LevelOne = () => {
                     </div>
                  </div>
                  <div className="Table">
-                     <div className="TableFirst">
-                            <a>0</a>
-                     </div>
-                     <div className="TableSecond">
-                             <a>0</a>
-                     </div>
+                    <Scors/>
                  </div>
             </div>
         </>

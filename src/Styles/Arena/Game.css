@@ -1,3 +1,7 @@
+:root {
+    --playercolor: red;
+    --computercolor: green;
+}
 
 .AGame{
     position: relative;
@@ -12,7 +16,7 @@
     position: relative;
     width: 300px;
     height: 300px;
-    background-color: red;
+    background-color: var(--playercolor);
     float: left;
     margin-right: 300px;
 }
@@ -21,7 +25,7 @@
     position: relative;
     width: 300px;
     height: 300px;
-    background-color: blue;
+    background-color: var(--computercolor);
     float: left;
 }
 
