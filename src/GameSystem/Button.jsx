@@ -1,40 +1,51 @@
-import React, { useState } from "react";
+import React, { useState , useContext, createContext } from "react";
 import '../Page/LevelOne';
 import Game from "./SystemGame";
 
-const Button_Game = (props) => {
+const Button_Game = () => {
 
-    const [howbutton, setHowButton] = useState("0");
+
+    const [HowNumberButton, setHowNumberButton] = useState("0");
+
+    const outEffect = () => {
+        const div = document.getElementById("BS");
+        div.style.display = 'none';
+    }      
+    setTimeout(outEffect, 5250)
 
     const EffectBS = (e) => {
-        const id = e.target.id;
+            const id = e.target.id;
 
-        if(id === "1"){
-            setHowButton(1)
-        }else if(id === "2"){
-            setHowButton(2)
-        }else if(id === "3"){
-            setHowButton(3)
-        }else{
-            setHowButton("Erorr on ID")
+            const div = document.getElementById("BS");
+                div.classList.remove('disable');
+                div.classList.add('active');
+                div.style.display = 'block';        
+            
+            if(id === "1"){
+                return {count: setHowNumberButton(1)}
+            }else if(id === "2"){
+                return {count: setHowNumberButton(2)}
+            }else if(id === "3"){
+                return {count: setHowNumberButton(3)}
+            }else{
+                return {count: setHowNumberButton("Error id")}
+            }            
+
+            
         }
-
-        const div = document.getElementById("BS");
-        div.style.display="block";
-
         const out = () => {
             const div = document.getElementById("BS");
-            div.style.display="none"; 
+            div.classList.remove('active');
+            div.classList.add('disable');
         } 
-    setTimeout(out, 4000)
-}
+setTimeout(out, 4000)
 
 
+    
 
     return (  
         <div class="container">
             <div class="row">
-            {props.howbutton}
                 <div class="col">
                     <div class="row justify-content-md-center">
                         <div class="col col-lg-2">
@@ -59,7 +70,6 @@ const Button_Game = (props) => {
                 </div>
             </div>
         </div>
-        
     );
 }
  
