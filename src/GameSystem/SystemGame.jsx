@@ -1,8 +1,12 @@
-import React, { useEffect } from "react";
+import React, { useEffect , useContext } from "react";
 import '../Styles/Arena/Game.css';
 import Button_Game from "./Button";
+import CardContext from "../Context/CardSystem";
+
 
 const Game = () => {
+
+    const [ items ] = useContext(CardContext )
 
     return ( 
         <>

@@ -1,11 +1,12 @@
 import React, { useState , useContext, createContext } from "react";
 import '../Page/LevelOne';
-import Game from "./SystemGame";
+import CardContext from "../Context/CardSystem";
 
 const Button_Game = () => {
 
-
-    const [HowNumberButton, setHowNumberButton] = useState("0");
+    const {addToCard} = useContext(CardContext)
+ 
+    const [HowNumberButton, setHowNumberButton] = useState(0);
 
     const outEffect = () => {
         const div = document.getElementById("BS");
@@ -22,11 +23,11 @@ const Button_Game = () => {
                 div.style.display = 'block';        
             
             if(id === "1"){
-                return {count: setHowNumberButton(1)}
+                return addToCard(1)
             }else if(id === "2"){
-                return {count: setHowNumberButton(2)}
+                return addToCard(2)
             }else if(id === "3"){
-                return {count: setHowNumberButton(3)}
+                return addToCard(3)
             }else{
                 return {count: setHowNumberButton("Error id")}
             }            
