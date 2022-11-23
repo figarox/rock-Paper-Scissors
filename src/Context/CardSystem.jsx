@@ -9,9 +9,9 @@ export function CardProvider({ children }) {
         }
 
         return (
-            <CardProvider.Provider value={{ id }}>
+            <CardContext.Provider value={{items , addToCard}}>
                 {children}
-            </CardProvider.Provider>
+            </CardContext.Provider>
         );
 };
 
