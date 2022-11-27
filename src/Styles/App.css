@@ -3,13 +3,6 @@
   margin: 0 auto;
 }
 
-.Body{
-  background-color: rgb(255, 255, 255);
-  width: 100%;
-  height: 100vh;
-  position: relative;
-}
-
 .row > .col{
   padding-left: 0px;
   padding-right: 0px;

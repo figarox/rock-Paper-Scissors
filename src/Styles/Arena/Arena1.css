@@ -1,12 +1,23 @@
+.BodyColor{
+    background: rgb(12,5,116);
+    background: linear-gradient(36deg, rgba(12,5,116,1) 0%, rgba(23,23,218,1) 31%, rgba(0,212,255,1) 100%);
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
 
 .Arena{
     position: absolute;
     width: 72%;
     height: 60%;
-    background-color: rgb(250, 250, 250);
     top: 8%;
     left: 14%;
-    border-radius: 35px;
+    background: rgba(255, 255, 255, 0.14);
+    border-radius: 26px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(12.3px);
+    -webkit-backdrop-filter: blur(12.3px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 .Table{
     position: absolute;
@@ -40,18 +51,27 @@
     z-index: 2;
     width: 55px;
     height: 55px;
-    border: 1.2px solid black;
+    border: 1.2px solid;
+    background: linear-gradient(white, white) padding-box,
+              linear-gradient(36deg, rgba(12,5,116,1) 0%, rgba(23,23,218,1) 31%, rgba(0,212,255,1) 100%) border-box;
     border-radius: 10px;
-    transform: rotate(45deg);
+     border: 2px solid transparent;
+    transform: rotate(0);
     transition: 350ms;
 
 }
 .ButtonWarOne:hover,.ButtonWarTwo:hover,.ButtonWarThree:hover{
-    transform: rotate(0deg) scale(1.5);
+    transform: rotate(-70deg) scale(1.5);
     cursor: pointer;
-    border: 1.4px solid rgb(251, 193, 2);
+    border: 1.4px solid ;
     background-color: white;
 
+}
+
+
+.pictureToButtonGame{
+    width: 50px;
+    height: 50px;
 }
 
 .custom-shape-divider-bottom-1658162932 {
@@ -87,6 +107,17 @@
     animation: flashBS 600ms forwards;
 }
 
+.BlackScreen.disable{
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.671);
+    backdrop-filter: blur(8.6px);
+    display: none;
+    animation: flashBS_out 600ms forwards;
+}
+
 @keyframes flashBS {
     0% {
         opacity: 0;
@@ -109,7 +140,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50% ,-50%);
-    animation: effect_suprise 700ms ease 500ms forwards;
+    animation: effect_suprise 350ms ease 140ms forwards;
 }
 
 #blobSvg{

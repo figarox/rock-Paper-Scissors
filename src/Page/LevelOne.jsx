@@ -2,7 +2,7 @@ import React from "react";
 import '../Styles/App.css'
 import '../Styles/Arena/Arena1.css';
 import Blob from "../Styles/svg/blobanimation.svg";
-import Game from "../GameSystem/SystemGame";
+import Game from "../GameSystem/ShowGame.jsx";
 
 const LevelOne = () => {
     
@@ -13,7 +13,7 @@ const LevelOne = () => {
                    <img src={Blob} alt="Blob" />
                 </div>
             </div>
-            <div className="Body">
+            <div className="BodyColor">
                 <div className="Arena">
                     <Game/>
                  </div>

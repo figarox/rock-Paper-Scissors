@@ -3,13 +3,13 @@ import { createContext , useState } from "react";
 const CardContext = createContext();
 
 export function CardProvider({ children }) {
-    const [ items , setItems ] = useState('');
-        const addToCard = ( id ) => {
-            setItems(id)
-        }
+    const [ idPlayer , setIdPlayer ] = useState('');
+    const [ idComputer , setIdComputer ] = useState('');
+
+
 
         return (
-            <CardContext.Provider value={{items , addToCard}}>
+            <CardContext.Provider value={{idPlayer , setIdPlayer , idComputer}}>
                 {children}
             </CardContext.Provider>
         );
