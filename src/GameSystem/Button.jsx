@@ -7,7 +7,7 @@ import Stone from "../Pictures/stone_L.png";
 
 
 const Button_Game = ( id ) => {
-    const { setIdPlayer } = useContext(CardContext)
+    const { setIdPlayer , SystemGame , scoreP , scoreC , Win} = useContext(CardContext)
 
     const EffectBS = (e) => {
         
@@ -21,7 +21,8 @@ const Button_Game = ( id ) => {
                 setIdPlayer(setIdPlayer => [...setIdPlayer , 3])
             }else{
                  console.log("Error id ")
-            }            
+            }          
+            SystemGame();
 
             //Effect blob show and hiden
 
@@ -29,20 +30,6 @@ const Button_Game = ( id ) => {
                 div.classList.remove('disable');
                 div.classList.add('active');
                 div.style.display = 'block';        
-
-            const outEffect = () => {
-                const div = document.getElementById("BS");
-                div.style.display = 'none';
-            }      
-            setTimeout(outEffect, 4650)
-        
-            const out = () => {
-                const div = document.getElementById("BS");
-                div.classList.remove('active');
-                div.classList.add('disable');
-            } 
-            setTimeout(out, 3700)
-        
     }
 
 
@@ -72,7 +59,12 @@ const Button_Game = ( id ) => {
                     </div>
                 </div>
                 <div class="col-lg-5">
-                two of three columns
+                    <div className="Score">
+                    {scoreP}
+                    </div>
+                    <div className="Score">
+                    {scoreC}
+                    </div>
                 </div>
             </div>
         </div>
